@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+.moduleTitle {
+    margin: 0.2em 0 0.2em 0;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.658);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28pt;
+    text-align: center;
+    vertical-align: middle;
+    text-transform:uppercase;
+}
+
+.rapper {
+    display: flex;
+    vertical-align: middle;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+a.tbutton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: black;
+
+    display: flex;
+    background-color: white;
+    width: 520px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.5em;
+}
+
+a.tbutton:hover {
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.modulebutton:hover {
+    background-color: #e6e6e6;
+}
+
+.tm-col-custom {
+    width: 62%;
+}
+
+.answer {
+    margin: 0.5em 0 1em 1em;
+}
+
+
+/* .modulebutton {
+    background-color: white;
+    width: 520px;
+    margin-bottom: 1em;
+    height: 50px;
+    border: 0;
+    
+} */

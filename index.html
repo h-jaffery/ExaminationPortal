@@ -59,8 +59,18 @@
                             // If x is Not a Number or less than one or greater than 10
                             let text;
                             if (x == "trainer" && y == "password") {
-                                window.location.href="trainerDashboard.html"
-                            } else {
+                                text = "";
+                                window.location.href="trainerDashboard.html";
+                                return;
+                            } 
+                            if (x == "admin" && y == "password") {
+                                text = "";
+                                window.location.href = "adminDashboard.html";
+                            }
+                            else if ((x == "trainer" && y != "password") || (x == "admin" && y != "password")) {
+                                text = "Please enter a valid password";
+                            } 
+                            else {
                                 text = "Please enter a valid username/password";
                             }
                             document.getElementById("error").innerHTML = text;

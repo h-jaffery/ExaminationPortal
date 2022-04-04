@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login Page - Dashboard Admin Template</title>
+    <title>Login - FDM Examination Portal</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <!-- https://fonts.google.com/specimen/Open+Sans -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -31,7 +31,7 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <form action="index.html" method="post" class="tm-login-form">
+                            <form action="index.html" method="post" class="tm-login-form" autocomplete="off">
                                 <div class="input-group">
                                     <label for="username" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Username:</label>
                                     <input name="username" type="text" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="username" value="" required>
@@ -44,7 +44,7 @@
                                     <p id="error" style="text-align: center; margin-top: 1em; color: red;"></p>
                                 </div>
                                 <div class="input-group mt-3">
-                                    <button type="submit"onclick="login()" class="btn btn-primary d-inline-block mx-auto">Login</button>
+                                    <button type="submit" onclick="login()" class="btn btn-primary d-inline-block mx-auto">Login</button>
                                 </div>
                                 <p style="text-align: center; margin-top: 1em;"><a href="">Forgot your password?</a></p>
                             </form>
@@ -53,27 +53,25 @@
                     <script>
                         function login() {
                             event.preventDefault();
-                            // Get the value of the input field with id="numb"
                             let x = document.getElementById("username").value;
                             let y = document.getElementById("password").value;
-                            // If x is Not a Number or less than one or greater than 10
                             let text;
                             if (x == "trainer" && y == "password") {
-                                text = "";
                                 window.location.href="trainerDashboard.html";
-                                return;
                             } 
-                            if (x == "admin" && y == "password") {
-                                text = "";
+                            if (x == "trainer" && y == "newpassword") {
+                                window.location.href="trainerDashboard.html";
+                            } 
+                            else if (x == "trainee" && y == "password") {
+                                window.location.href = "traineeDashboard.html";
+                            }
+                            else if (x == "admin" && y == "password") {
                                 window.location.href = "adminDashboard.html";
                             }
-                            else if ((x == "trainer" && y != "password") || (x == "admin" && y != "password")) {
-                                text = "Please enter a valid password";
-                            } 
                             else {
                                 text = "Please enter a valid username/password";
+                                document.getElementById("error").innerHTML = text;
                             }
-                            document.getElementById("error").innerHTML = text;
                         }
                     </script>
                 </div>

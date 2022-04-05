@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard Admin Template by Tooplate.com</title>
+    <title>Modify Account Details - FDM Examination Portal</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <!-- https://fonts.google.com/specimen/Open+Sans -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -79,105 +79,62 @@
                     </nav>
                 </div>
             </div>
-            <!-- row -->
-            <div class="row tm-content-row tm-mt-big">
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Latest Hits</h2>
-                        <canvas id="lineChart"></canvas>
-                    </div>
-                </div>
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Performance</h2>
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
-                <div class="tm-col tm-col-small">
-                    <div class="bg-white tm-block h-100">
-                        <canvas id="pieChart" class="chartjs-render-monitor"></canvas>
-                    </div>
-                </div>
-
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <div class="row">
-                            <div class="col-8">
-                                <h2 class="tm-block-title d-inline-block">Top Product List</h2>
-
-                            </div>
-                            <div class="col-4 text-right">
-                                <a href="products.html" class="tm-link-black">View All</a>
-                            </div>
+            <!-- enter content here -->
+            <div class = "newbox">
+                <form action="modifyAccount.html" method="post" class="" autocomplete="off">
+                    <h2 style="text-align: center">Modify Account Details</h2>
+                    <div style="margin: 3% 0%;">
+                        <div style="display: inline-block;">
+                            <p>First Name:</p>
+                            <input type="text" id="oldPass" value="Trainer" required>
                         </div>
-                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
-                            <li class="tm-list-group-item">
-                                Donec eget libero
-                            </li>
-                            <li class="tm-list-group-item">
-                                Nunc luctus suscipit elementum
-                            </li>
-                            <li class="tm-list-group-item">
-                                Maecenas eu justo maximus
-                            </li>
-                            <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
-                            </li>
-                            <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
-                            </li>
-                            <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
-                            </li>
-                            <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Calendar</h2>
-                        <div id="calendar"></div>
-                        <div class="row mt-4">
-                            <div class="col-12 text-right">
-                                <a href="#" class="tm-link-black">View Schedules</a>
-                            </div>
+                        <div style="display: inline-block; margin-left: 24%;">
+                            <p>Last Name:</p>
+                            <input type="text" id="oldPass" value="Example" required>
                         </div>
-
                     </div>
-                </div>
-                <div class="tm-col tm-col-small">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Upcoming Tasks</h2>
-                        <ol class="tm-list-group">
-                            <li class="tm-list-group-item">List of tasks</li>
-                            <li class="tm-list-group-item">Lorem ipsum doloe</li>
-                            <li class="tm-list-group-item">Read reports</li>
-                            <li class="tm-list-group-item">Write email</li>
-                            
-                            <li class="tm-list-group-item">Call customers</li>
-                            <li class="tm-list-group-item">Go to meeting</li>
-                            <li class="tm-list-group-item">Weekly plan</li>
-                            <li class="tm-list-group-item">Ask for feedback</li>
-                            
-                            <li class="tm-list-group-item">Meet Supervisor</li>
-                            <li class="tm-list-group-item">Company trip</li>
-                        </ol>
+                    <div style="margin: 3% 0%;">
+                        <div style="display: inline-block;">
+                            <p>Username:</p>
+                            <input type="text" id="oldPass" value="trainer" required>
+                        </div>
+                        <div style="display: inline-block; margin-left: 24%;">
+                            <p>Email:</p>
+                            <input type="email" id="oldPass" value="trainer@fdm.com" required>
+                        </div>
                     </div>
-                </div>
+                    <div style="margin: 3% 0%;">
+                        <div style="display: inline-block;">
+                            <p>Course:</p>
+                            <input type="text" id="oldPass" value="Graduate Programme" disabled required>
+                        </div>
+                        <div style="display: inline-block; margin-left: 24%;">
+                            <button type="submit" onclick="resetPassword();" class="d-inline-block">Reset Password</button>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" onclick="submitChanges();" class="btn btn-primary d-inline-block">Submit Changes</button>
+                        <p id="error" style="text-align: center; color: red; margin-top: 10px;"></p>
+                    </div>
+                </form>
+                <script>
+                    function resetPassword() {
+                        event.preventDefault();
+                        window.location.href = "resetPassword.html";
+                    }
+                    function submitChanges() {
+                        event.preventDefault();
+                        window.location.href = "trainerDashboard.html";
+                    }
+                </script>
             </div>
             <footer class="row tm-mt-small">
-                <div class="col-12 font-weight-light">
+                <div class="col-12 font-weight-light text-center">
                     <p class="d-inline-block tm-bg-black text-white py-2 px-4">
-                        Copyright &copy; 2022 QMUL SE Project Group 19
-                    </p>
+                        Copyright &copy; 2022 QMUL SE Project Group 19</p>
                 </div>
             </footer>
         </div>
     </div>
-    <script>
-
-    </script>
 </body>
 </html>

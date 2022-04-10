@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trainer Dashboard</title>
+    <title>Reports</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <!-- https://fonts.google.com/specimen/Open+Sans -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -79,42 +79,27 @@
                     </nav>
                 </div>
             </div>
-            <div class="row tm-content-row tm-mt-big">
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Open Module<a href="openmodules.html" class="tm-link-plus">+</a></h2>
-                        <canvas id="lineChart"></canvas>
-                    </div>
-                </div>
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Close Module<a href="closemodules.html" class="tm-link-plus">+</a></h2>
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Submit Report<a href="createReport.html" class="tm-link-plus">+</a></h2>
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
+            <!-- row -->
+            <div class="reports-box">
+                <div class="bg-white tm-block h-100">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2 class="tm-block-title d-inline-block">Reports</h2>
 
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <div class="row">
-                            <div class="col-8">
-                                <h2 class="tm-block-title d-inline-block">Current Modules</h2>
-                            </div>
                         </div>
-                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
-                            <li class="tm-list-group-item">
-                                Module 1
-                            </li>
-                            <li class="tm-list-group-item">
-                                Module 2
-                            </li>
-                        </ol>
                     </div>
+                    <div class="row">
+                        <div class="report-title-box">
+                            <h3 class="report-title">Title</h3>
+                            <p class="reports-titles-text">Help</p>
+                            <p class="reports-titles-text">Can't log out</p>
+                        </div>
+                        <div class="report-content-box">
+                            <h3 class="report-content">Content</h3>
+                            <p class="report-content-text">I cannot pass my module :(</p>
+                            <p class="report-content-text">Does not work</p>
+                        </div>
+                    </div>  
                 </div>
             </div>
             <footer class="row tm-mt-small">
@@ -124,10 +109,3 @@
                     </p>
                 </div>
             </footer>
-        </div>
-    </div>
-    <script>
-
-    </script>
-</body>
-</html>

@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Report</title>
+    <title>Reports</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <!-- https://fonts.google.com/specimen/Open+Sans -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="css/tooplate.css">
-    <script src = "addReport.js"></script>
 </head>
 
 <body id="reportsPage">
@@ -80,23 +79,28 @@
                     </nav>
                 </div>
             </div>
-            <!-- enter content here -->
-            <div class = "box">
-                <form class = "addReport" method = "POST" action = "reports.php" id = "form">
-                    <fieldset class = "addReport">
-                        <legend class = "addReport">Add Report</legend>
-                        <p>
-                            <input type = "text" name = "Title" placeholder = "Title" id = "title">
-                        </p>
-                        <p>
-                            <textarea name = "text" placeholder= "Enter your text here" rows = "4" cols = "55" id = "content"></textarea>
-                        </p>
-                        <p class = "post">
-                            <input type = "submit" value = "Post" class = "post" onclick = "checkForm();">
-                            <input type = "reset" value = "Clear" class = "clear" onclick = "clearConfirm();">
-                        </p>
-                    </fieldset>
-                </form>
+            <!-- row -->
+            <div class="reports-box">
+                <div class="bg-white tm-block h-100">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2 class="tm-block-title d-inline-block">Reports</h2>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="report-title-box">
+                            <h3 class="report-title">Title</h3>
+                            <p class="reports-titles-text">Help</p>
+                            <p class="reports-titles-text">Can't log out</p>
+                        </div>
+                        <div class="report-content-box">
+                            <h3 class="report-content">Content</h3>
+                            <p class="report-content-text">I cannot pass my module :(</p>
+                            <p class="report-content-text">Does not work</p>
+                        </div>
+                    </div>  
+                </div>
             </div>
             <footer class="row tm-mt-small">
                 <div class="col-12 font-weight-light">
@@ -105,7 +109,3 @@
                     </p>
                 </div>
             </footer>
-        </div>
-    </div>
-</body>
-</html>

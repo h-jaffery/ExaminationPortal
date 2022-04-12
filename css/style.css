@@ -70,3 +70,10 @@ a.tbutton:hover {
     border: 0;
     
 } */
+
+.markHeader {
+    background: white;
+    margin-bottom: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Report</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/tooplate.css">
+    <script src = "addReport.js"></script>
+</head>
+
+<body id="reportsPage">
+    <div class="" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                        <a class="navbar-brand" href="#">
+                            <img height="80em" src="img/fdm_logo_cropped.jpg" />
+                            <h3 style="font-size: 30px; margin-top: 1.3em; margin-left: 0.5em;" class="tm-block-title"><strong>Examination<br>Portal</strong></h3>
+                        </a>
+                        <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Dashboard
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Reports
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Daily Report</a>
+                                        <a class="dropdown-item" href="#">Weekly Report</a>
+                                        <a class="dropdown-item" href="#">Yearly Report</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="products.html">Products</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="accounts.html">Accounts</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Settings
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Profile</a>
+                                        <a class="dropdown-item" href="#">Billing</a>
+                                        <a class="dropdown-item" href="#">Customize</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex" href="login.html">
+                                        <i class="far fa-user mr-2 tm-logout-icon"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- enter content here -->
+            <div class = "newbox2" style="display: inline-block;">
+                <h3>Programming Module Exam</h3>
+                <form method = "POST" action = "reports.php" id = "form">
+                    <p>When was the first computer invented? [1 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>What was the name of the first computer invented?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>Who is known as the father of computers?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>What was the first mass-produced computer?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>What is Computer programming?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>How does programming work?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>When a syntax error occurs?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>When a runtime error occurs?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <p>What are reserved words?</p>
+                    <input style="margin-bottom: 1%;" type="text">
+                    <br><br><button type="submit" style="margin-right: 5%;" onclick="" class="btn btn-primary d-inline-block">Submit</button>
+                    <button type="submit" onclick="" class="btn btn-primary d-inline-block">Save Changes</button>
+                </form>
+            </div>
+            <div class = "newbox3" style="display: inline-block;">
+                <h5>Time Remaining:</h2>
+                <p id="demo"></p>
+
+                <script>
+                    // Set the date we're counting down to
+                    var date = new Date();
+                    date.setHours( date.getHours() + 2);
+                    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    console.log(date.getUTCMonth());
+                    console.log(date.getUTCDate());
+                    console.log(date.getUTCFullYear());
+                    console.log(date.getHours());
+                    console.log(date.getMinutes());
+                    console.log(date.getSeconds());
+
+                    var string = months[date.getUTCMonth()] + " " + date.getUTCDate() + ", "  + date.getUTCFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                    console.log(string);
+                    // Set the date we're counting down to
+                    var countDownDate = new Date(string).getTime();
+
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+
+                    // Get today's date and time
+                    var now = new Date().getTime();
+                        
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+                        
+                    // Time calculations for days, hours, minutes and seconds
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        
+                    // Output the result in an element with id="demo"
+                    document.getElementById("demo").innerHTML = hours + "h "
+                    + minutes + "m " + seconds + "s ";
+                        
+                    // If the count down is over, write some text 
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                    }, 1000);
+
+                    </script>
+            </div>
+            <footer class="row tm-mt-small">
+                <div class="col-12 font-weight-light">
+                    <p class="d-inline-block tm-bg-black text-white py-2 px-4">
+                        Copyright &copy; 2022 QMUL SE Project Group 19
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

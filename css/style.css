@@ -71,9 +71,37 @@ a.tbutton:hover {
     
 } */
 
+.questionList {
+    
+}
+
+.answerList {
+    
+}
+
+.attemptQuestion {
+    border-left: 6px solid gray;
+}
+
+.attemptHeader {
+    padding: 2%;
+    background-color: #e6e6e6;
+}
+
+.attemptAnswer {
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+
+
 .markHeader {
     background: white;
     margin-bottom: 1%;
     padding-top: 1%;
     padding-bottom: 1%;
+}
+
+.scrollable {
+    overflow-y: auto;
 }

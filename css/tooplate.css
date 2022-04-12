@@ -31,6 +31,24 @@ body {
   background-color: #f8f9fa;
 }
 
+.newbox2{
+  width: 75%;
+  margin-top: 5%;
+  padding: 2%;
+  background-color: #f8f9fa;
+  display: inline-block;
+}
+
+.newbox3{
+  width: 20%;
+  margin-left: 2%;
+  padding: 2%;
+  margin-top: 5%;
+  background-color: #f8f9fa;
+  display: inline-block;
+  vertical-align: top;
+}
+
 form.addReport{
   width: 46%;
   margin-left: 30%;

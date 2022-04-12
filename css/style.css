@@ -3,12 +3,14 @@
 .moduleTitle {
     margin: 0.2em 0 0.2em 0;
     color: black;
-    background-color: rgba(255, 255, 255, 0.658);
+    background-color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
     font-size: 28pt;
     text-align: center;
     vertical-align: middle;
     text-transform:uppercase;
+    margin-bottom: 1%;
+    margin-top: 1%;
 }
 
 .rapper {

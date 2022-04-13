@@ -151,7 +151,40 @@
             </div>
         </footer>
     </div>
-
-    
     
 </body>
+<script>
+    function printQuestions(questionArray, traineeAnswer, questionDisplay){
+        for (let i=0; i <questionArray.length; i++){
+            if(traineeAnswer[i] == null){
+                traineeAnswer[i] = "None";
+            }
+
+            text = 
+            `<div class="attemptQuestion">
+                <div class="attemptHeader row">
+                    <div class="questionTitle col-sm-9">${i+1}. ${questionArray[i].questionContent}</div>
+                    <div class="questionValue col-sm-3">[${questionArray[i].markValue} mark]</div>
+                </div>
+                
+                <div class="attemptAnswer">
+                    <div>
+                        <p>Trainee answer: ${traineeAnswer[i]}</p>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-3">
+                                <p>Marks given:</p>
+                            </div>
+                            <div class="col-6">
+                                <input type="number" value="0" min="0" max="${questionArray.markValue}" id="markList${i}" style="margin-bottom: 1%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+            questionDisplay.insertAdjacentHTML("beforeend", text);
+        }
+            
+    }
+</script>

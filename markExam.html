@@ -23,8 +23,8 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-xl navbar-light bg-light">
                     <a class="navbar-brand" href="index.html">
-                        <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
-                        <h1 class="tm-site-title mb-0">Dashboard</h1>
+                        <img height="80em" src="img/fdm_logo_cropped.jpg" />
+                        <h3 style="font-size: 30px; margin-top: 1.3em; margin-left: 0.5em;" class="tm-block-title"><strong>Examination<br>Portal</strong></h3>                
                     </a>
                     <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -107,10 +107,9 @@
         </div>
 
         <footer class="row tm-mt-small">
-            <div class="col-12 font-weight-light">
+            <div class="col-12 font-weight-light text-center">
                 <p class="d-inline-block tm-bg-black text-white py-2 px-4">
-                    Copyright &copy; 2022 QMUL SE Project Group 19
-                </p>
+                    Copyright &copy; 2022 QMUL SE Project Group 19</p>
             </div>
         </footer>
     </div>
@@ -223,6 +222,7 @@
                 mark_Array[i] = document.getElementById(`markList${i}`).value;
             }
             sessionStorage.setItem('markResultArray', JSON.stringify(mark_Array));
+            window.location.href="trainerDashboard.html"
         }
 
     </script>    

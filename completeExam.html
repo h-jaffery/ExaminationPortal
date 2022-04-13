@@ -31,7 +31,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 37%;">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 36%;">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link active" href="traineeDashboard.html">Dashboard
@@ -116,14 +116,14 @@
                     var date = new Date();
                     date.setHours( date.getHours() + 2);
                     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                    console.log(date.getUTCMonth());
-                    console.log(date.getUTCDate());
-                    console.log(date.getUTCFullYear());
+                    console.log(date.getMonth());
+                    console.log(date.getDate());
+                    console.log(date.getFullYear());
                     console.log(date.getHours());
                     console.log(date.getMinutes());
                     console.log(date.getSeconds());
 
-                    var string = months[date.getUTCMonth()] + " " + date.getUTCDate() + ", "  + date.getUTCFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                    var string = months[date.getMonth()] + " " + date.getDate() + ", "  + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
                     console.log(string);
                     // Set the date we're counting down to
                     var countDownDate = new Date(string).getTime();
@@ -173,14 +173,13 @@
                     }
                     </script>
             </div>
-            <footer class="row tm-mt-small">
-                <div class="col-12 font-weight-light">
-                    <p class="d-inline-block tm-bg-black text-white py-2 px-4">
-                        Copyright &copy; 2022 QMUL SE Project Group 19
-                    </p>
-                </div>
-            </footer>
         </div>
     </div>
+    <footer class="row tm-mt-small">
+        <div class="col-12 font-weight-light text-center">
+            <p class="d-inline-block tm-bg-black text-white py-2 px-4">
+                Copyright &copy; 2022 QMUL SE Project Group 19</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -90,10 +90,19 @@ a.tbutton:hover {
 
 .attemptAnswer {
     padding: 2%;
+}
+
+.feedbackBox{
+    background-color: rgba(152, 251, 152, 0.466);
+    padding: 1%;
+    padding-left: 2%;
     margin-bottom: 2%;
 }
 
-
+.ResultInfo{
+    padding: 2%;
+    padding-left: 4%;
+}
 
 .markHeader {
     background: white;

@@ -5,7 +5,7 @@ let questionArray = new Array(
     new Question(4, "What was the first mass-produced computer?", 1, 4),
     new Question(5, "What is Computer programming?", 2, 5),
     new Question(6, "How does programming work?", 3, 6),
-    new Question(7, "When a syntax error occurs?", 1, 7),
+    new Question(7, "When a syntax error occurs?", 2, 7),
     new Question(8, "When a runtime error occurs?", 3, 8),
     new Question(9, " What are reserved words?", 1, 9),
 );

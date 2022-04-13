@@ -57,6 +57,17 @@ a.tbutton:hover {
     width: 62%;
 }
 
+.tm-col-custom2 {
+    
+    background-color: white;
+    width: 520px;
+    
+}
+
+.tm-list-group-item a {
+    text-decoration: none;
+}
+
 .answer {
     margin: 0.5em 0 1em 1em;
 }

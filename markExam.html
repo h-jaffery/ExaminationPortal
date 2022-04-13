@@ -176,7 +176,7 @@
             text = 
             `<div>
                 <p id="total"></p>
-                <button type="submit" onclick="" class="btn btn-primary d-inline-block">Submit</button>
+                <button type="submit" onclick="submitMarks()" class="btn btn-primary d-inline-block">Submit</button>
             </div>`
             questionDisplay.insertAdjacentHTML("beforeend", text);
         }
@@ -213,6 +213,16 @@
             document.getElementById("total").innerHTML = string;
         }, 1000);
 
+        function submitMarks(){
+            let mark_Array = [];
+            for (let i=0; i < questionArray.length; i++){
+                mark_Array[i] = document.getElementById(`markList${i}`).value;
+            }
+
+            sessionStorage.setItem('markResultArray', JSON.stringify(mark_Array));
+            let var2 = sessionStorage.getItem('markResultArray');
+            console.log(var2[0]);
+        }
 
     </script>    
 </body>

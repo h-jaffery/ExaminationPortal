@@ -143,15 +143,17 @@
                                 <div class="col-6">
                                     <input style="margin-bottom: 1%;" type="text">
                                 </div>
-                                <div class="col-3">
-                                    <button type="submit" onclick="" class="btn btn-primary d-inline-block">Save</button>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>`
                 questionDisplay.insertAdjacentHTML("beforeend", text);
             }
+            text += 
+            `<div>
+                <button type="submit" onclick="" class="btn btn-primary d-inline-block">Save</button>
+            </div>`
+            questionDisplay.insertAdjacentHTML("beforeend", text);
         }
 
         function printAnswers(questionArray, markSchemeArray, answerDisplay){

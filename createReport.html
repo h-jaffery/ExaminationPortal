@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="css/tooplate.css">
-    <script src = "addReport.js"></script>
 </head>
 
 <body id="reportsPage">
@@ -31,7 +30,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 37%;">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 36%;">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link active" href="traineeDashboard.html">Dashboard
@@ -58,14 +57,15 @@
                     <fieldset class = "addReport">
                         <legend class = "addReport">Add Report</legend>
                         <p>
-                            <input type = "text" name = "Title" placeholder = "Title" id = "titleReport">
+                            <input type = "text" name = "Title" placeholder = "Title" id = "titleReport" value="">
                         </p>
                         <p>
-                            <textarea name = "text" placeholder= "Enter your text here" rows = "4" cols = "55" id = "contentReport"></textarea>
+                            <textarea name = "text" placeholder= "Enter your text here" rows = "4" cols = "55" id = "contentReport" value=""></textarea>
                         </p>
                         <p class = "post">
                             <input type = "submit" value = "Post" class = "post" onclick = "sendReport();">
-                            <input type = "reset" value = "Clear" class = "clear" onclick = "clearConfirm();">
+                            <input type = "reset" value = "Clear" class = "clear">
+                            <p id="error" style="text-align: center; color: red; margin-top: 10px;"></p>
                         </p>
                     </fieldset>
                 </form>
@@ -83,13 +83,18 @@
 <script>
     function sendReport() {
         event.preventDefault();
-
+        let error;
         title = document.getElementById('titleReport').value;
         text = document.getElementById('contentReport').value;
-        let report = new Report(title, text);
+        if (title == "" || text == "") {
+            error = "Please don't leave any fields empty";
+            document.getElementById("error").innerHTML = error;
+        } else {
+            let report = new Report(title, text);
 
-        sessionStorage.setItem('submittedReport', JSON.stringify(report)); // adds a Report object 
-        window.location.href = "traineeDashboard.html";
+            sessionStorage.setItem('submittedReport', JSON.stringify(report)); // adds a Report object 
+            window.location.href = "traineeDashboard.html";
+        }
     }
 </script>
 </html>

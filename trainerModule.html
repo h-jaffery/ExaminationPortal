@@ -117,24 +117,27 @@
                     </div>
                     <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
                         <li class="tm-list-group-item">
-                            <a href="markExam.html">Mohammad Islam</a>
+                            <a href="markExam.html" onClick="passName('Mohammad Islam')">Mohammad Islam</a>
                         </li>
                         <li class="tm-list-group-item">
-                            <a href="markExam.html">Daquan Harrison</a>
+                            <a href="markExam.html" onClick="passName('Daquan Harrison')">Daquan Harrison</a>
                         </li>
                         <li class="tm-list-group-item">
-                            <a href="markExam.html">John Smith</a>
+                            <a href="markExam.html" onClick="passName('John Smith')">John Smith</a>
                         </li>
                         <li class="tm-list-group-item">
-                            <a href="markExam.html">Trainee Example</a>
+                            <a href="markExam.html" onClick="passName('Trainee Example')">Trainee Example</a>
                         </li>
                         
                     </ol>
                 </div>
             </div>
         </div>
-
-        
     </div>        
-    
+    <script>
+        function passName(name){
+            sessionStorage.setItem('trainee_name', name);
+        }
+    </script>
+
 </body>

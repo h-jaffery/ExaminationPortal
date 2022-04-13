@@ -41,3 +41,11 @@ if (JSON.parse(sessionStorage.getItem('markResultArray') == null)){
 else{
     marksGivenArray = JSON.parse(sessionStorage.getItem('markResultArray'));
 }
+
+let traineeName;
+if (JSON.parse(sessionStorage.getItem('trainee_name') == null)){
+    traineeName = 'Trainee';
+}
+else{
+    traineeName = sessionStorage.getItem('trainee_name');
+}

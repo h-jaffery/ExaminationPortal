@@ -77,7 +77,7 @@
                     <div class="tm-block">
                         <div class="col">
                             <h2 class="tm-block-title d-inline-block">Questions</h2>
-                            <p>Name: Trainee Example</p>
+                            <p id="traineeName"></p>
                                
                             <div class = "questionList">
                             </div>
@@ -189,6 +189,10 @@
             }
             document.getElementById("total").innerHTML = "Total marks: " + inputs;
         }
+        // Display name
+        const nameDisplay = document.getElementById(`traineeName`);
+        nameDisplay.innerHTML = "Name: " + traineeName;
+
 
         // Displaying trainee question attempt
         const questionDisplay = document.querySelector(".questionList");

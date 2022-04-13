@@ -57,13 +57,35 @@
                 <h3>Programming Module Exam</h3>
                 <form method = "POST" action = "reports.php" id = "form">
                     <p>When was the first computer invented? [1 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
+                    <input type="checkbox" id="vehicle1" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle1"> 1943</label><br>
+                    <input type="checkbox" id="vehicle2" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle2"> 1937</label><br>
+                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle3"> 1945</label><br>
+                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle3"> 1937</label><br>
+                    <script>
+                        function onlyOne(checkbox) {
+                            var checkboxes = document.getElementsByName('check')
+                            checkboxes.forEach((item) => {
+                                if (item !== checkbox) item.checked = false
+                            })
+                        }
+                    </script>
                     <p>What was the name of the first computer invented? [1 mark]</p>
                     <input style="margin-bottom: 1%;" type="text">
                     <p>Who is known as the father of computers? [1 mark]</p>
                     <input style="margin-bottom: 1%;" type="text">
                     <p>What was the first mass-produced computer? [1 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
+                    <input type="checkbox" id="vehicle1" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle1"> The Mac</label><br>
+                    <input type="checkbox" id="vehicle2" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle2"> IBM 650</label><br>
+                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle3"> Linux 500</label><br>
+                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
+                    <label style="vertical-align: top;" for="vehicle3"> Windows 270</label><br>
                     <p>What is Computer programming? [2 mark]</p>
                     <input style="margin-bottom: 1%;" type="text">
                     <p>How does programming work? [3 mark]</p>

@@ -72,32 +72,39 @@
                                 if (item !== checkbox) item.checked = false
                             })
                         }
+
+                        function onlyTwo(checkbox) {
+                            var checkboxes = document.getElementsByName('check2')
+                            checkboxes.forEach((item) => {
+                                if (item !== checkbox) item.checked = false
+                            })
+                        }
                     </script>
                     <p>2. What was the name of the first computer invented? [1 mark]</p>
                     <input style="margin-bottom: 1%;" type="text" id="num2">
                     <p>3. Who is known as the father of computers? [1 mark]</p>
                     <input style="margin-bottom: 1%;" type="text" id="num3">
                     <p>4. What was the first mass-produced computer? [1 mark]</p>
-                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num4" name="check2" onclick="onlyTwo(this)" value="The Mac">
                     <label style="vertical-align: top;" for="vehicle1"> The Mac</label><br>
-                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num4" name="check2" onclick="onlyTwo(this)" value="IBM 650">
                     <label style="vertical-align: top;" for="vehicle2"> IBM 650</label><br>
-                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num4" name="check2" onclick="onlyTwo(this)" value="Linux 500">
                     <label style="vertical-align: top;" for="vehicle3"> Linux 500</label><br>
-                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num4" name="check2" onclick="onlyTwo(this)" value="Windows 270">
                     <label style="vertical-align: top;" for="vehicle3"> Windows 270</label><br>
                     <p>5. What is Computer programming? [2 mark]</p>
                     <input style="margin-bottom: 1%;" type="text" id="num5">
                     <p>6. How does programming work? [3 mark]</p>
                     <input style="margin-bottom: 1%;" type="text" id="num6">
-                    <p>7. When a syntax error occurs? [1 mark]</p>
+                    <p>7. When a syntax error occurs? [2 mark]</p>
                     <input style="margin-bottom: 1%;" type="text" id="num7">
                     <p>8. When a runtime error occurs? [3 mark]</p>
                     <input style="margin-bottom: 1%;" type="text" id="num8">
                     <p>9. What are reserved words? [1 mark]</p>
                     <input style="margin-bottom: 1%;" type="text" id="num9">
-                    <br><br><button type="submit" style="margin-right: 5%;" onclick="" class="btn btn-primary d-inline-block">Submit</button>
-                    <button type="submit" onclick="" class="btn btn-primary d-inline-block">Save Changes</button>
+                    <br><br><button type="submit" style="margin-right: 5%;" onclick="sendAnswers();" class="btn btn-primary d-inline-block">Submit</button>
+                    <!-- <button type="submit" onclick="" class="btn btn-primary d-inline-block">Save Answers & Leave</button> -->
                 </form>
             </div>
             <div class = "newbox3" style="display: inline-block;">
@@ -149,9 +156,20 @@
                     
                     function sendAnswers() {
                         event.preventDefault();
-                        for (i=0; i < 9; i++){
-                            document.getElementById("storeArray")
+                        answers = [];
+                        for (i=1; i < 10; i++) {
+                            if (i == 1) {
+                                answers[i-1] = document.querySelector('#num1:checked').value;
+                            } else if (i == 4) {
+                                answers[i-1] = document.querySelector('#num4:checked').value;
+                            } else {
+                                answers[i-1] = document.getElementById(`num${i}`).value;
+                            }
                         }
+                        var myJsonString = JSON.stringify(answers);
+                        sessionStorage.setItem('traineeAnswers', myJsonString);
+
+                        window.location.href = "index.html";
                     }
                     </script>
             </div>

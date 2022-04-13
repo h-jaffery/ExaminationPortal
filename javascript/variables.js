@@ -22,8 +22,10 @@ let markSchemeArray = new Array(
     new MarkScheme(9, 'Reserved words or keywords are the words, which have predefined meanings. They have predefined uses and cannot be used or redefined for any other purpose in a programming language'),
 );
 
-let traineeAnswers =  new Array(
-    "1980",
-    "Programming follows a set of instructions that the computer follows...",
-    "Syntax error occurs when a code if not properly formatted",
-);
+// let traineeAnswers =  new Array(
+//     "1980",
+//     "Programming follows a set of instructions that the computer follows...",
+//     "Syntax error occurs when a code if not properly formatted",
+// );
+
+let traineeAnswers = JSON.parse(sessionStorage.getItem('traineeAnswers'));

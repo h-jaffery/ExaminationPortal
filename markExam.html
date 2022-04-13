@@ -81,6 +81,9 @@
                                
                             <div class = "questionList">
                             </div>
+
+                            <div class = "resultTotal">
+                            </div>
                         </div>
                         
                     </div>
@@ -139,10 +142,7 @@
                                     <p>Marks given:</p>
                                 </div>
                                 <div class="col-6">
-                                    <input style="margin-bottom: 1%;" type="text">
-                                </div>
-                                <div class="col-3">
-                                    <button type="submit" onclick="" class="btn btn-primary d-inline-block">Save</button>
+                                    <input type="number" value="0" min="0" max="${questionArray.markValue}" id="markList${i}" style="margin-bottom: 1%;">
                                 </div>
                             </div>
                         </div>
@@ -150,6 +150,7 @@
                 </div>`
                 questionDisplay.insertAdjacentHTML("beforeend", text);
             }
+            
         }
 
         function printAnswers(questionArray, markSchemeArray, answerDisplay){
@@ -171,6 +172,24 @@
             }
         }
 
+        function printTotal( questionArray, resultDispay){
+            text = 
+            `<div>
+                <p id="total"></p>
+                <button type="submit" onclick="" class="btn btn-primary d-inline-block">Submit</button>
+            </div>`
+            questionDisplay.insertAdjacentHTML("beforeend", text);
+        }
+
+        function storeInputs(){
+            var inputs = 0;
+            for (let i=0; i < questionArray.length; i++){
+                inputs += parseInt(document.getElementsByClassName(`markList${i}`));
+                // Pass string to int
+            }
+            document.getElementById("total").innerHTML = "Total marks: " + inputs;
+        }
+
         // Displaying trainee question attempt
         const questionDisplay = document.querySelector(".questionList");
         printQuestions(questionArray, traineeAnswers, questionDisplay);
@@ -178,6 +197,21 @@
         // Displaying answers
         const answerDisplay = document.querySelector(".answerList");
         printAnswers(questionArray, markSchemeArray, answerDisplay);
+
+        const resultDispay = document.querySelector(".resultTotal");
+        printTotal(questionArray, resultDispay);
+
+        var x = setInterval(function(){
+            var inputs = 0;
+            console.log(document.getElementById(`markList1`).value);
+            for (let i=0; i < questionArray.length; i++){
+                inputs += document.getElementById(`markList${i}`).value;
+                // Pass string to int
+                
+            }
+            document.getElementsById("total").innerHTML = inputs;
+        }, 1000);
+
 
     </script>    
 </body>

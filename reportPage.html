@@ -52,6 +52,7 @@
                 </div>
             </div>
             <!-- row -->
+            
             <div class="reports-box">
                 <div class="bg-white tm-block h-100">
                     <div class="row">
@@ -61,19 +62,17 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="report-title-box">
+                        <div class="report-title-box col-3">
                             <h3 class="report-title">Title</h3>
-                            <p class="reports-titles-text">Help</p>
-                            <p class="reports-titles-text">Can't log out</p>
                         </div>
-                        <div class="report-content-box">
+                        <div class="report-content-box col-9">
                             <h3 class="report-content">Content</h3>
-                            <p class="report-content-text">I cannot pass my module :(</p>
-                            <p class="report-content-text">Does not work</p>
                         </div>
-                    </div>  
+                    </div>
+                    <div class="displayReports"></div>
                 </div>
             </div>
+
             <footer class="row tm-mt-small">
                 <div class="col-12 font-weight-light">
                     <p class="d-inline-block tm-bg-black text-white py-2 px-4">
@@ -81,3 +80,43 @@
                     </p>
                 </div>
             </footer>
+        </div>
+    </div>
+</body>
+<script src="./javascript/classes.js"></script>
+<script src="./javascript/variables.js"></script>
+<script>
+
+    // Variable
+    var reportArray = [
+        new Report("Help opening module", "I cannot pass my module :("),
+        new Report("Can't log out", "Does not work"),
+    ];
+    if (JSON.parse(sessionStorage.getItem('submittedReport') == null)){
+        // Write error here
+    }
+    else{
+        reportObject = JSON.parse(sessionStorage.getItem('submittedReport'));
+        reportArray.push(reportObject); // Add report to report array
+    }
+
+    function printReports(reportDisplay, reportArray){
+        for (let i=0; i <reportArray.length; i++){
+            text = 
+            `<div class="row">
+                <div class="report-title-box col-3">
+                    <h3 class="report-title">${reportArray[i].title}</h3>
+                </div>
+                <div class="report-content-box col-9">
+                    <h3 class="report-content">${reportArray[i].content}</h3>
+                </div>
+            </div>`
+            reportDisplay.insertAdjacentHTML("beforeend", text);
+        }
+    }
+
+    const reportDisplay = document.querySelector(".displayReports");
+    printReports(reportDisplay, reportArray);
+
+
+</script>

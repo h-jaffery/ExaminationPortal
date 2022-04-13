@@ -58,13 +58,13 @@
                     <fieldset class = "addReport">
                         <legend class = "addReport">Add Report</legend>
                         <p>
-                            <input type = "text" name = "Title" placeholder = "Title" id = "title">
+                            <input type = "text" name = "Title" placeholder = "Title" id = "titleReport">
                         </p>
                         <p>
-                            <textarea name = "text" placeholder= "Enter your text here" rows = "4" cols = "55" id = "content"></textarea>
+                            <textarea name = "text" placeholder= "Enter your text here" rows = "4" cols = "55" id = "contentReport"></textarea>
                         </p>
                         <p class = "post">
-                            <input type = "submit" value = "Post" class = "post" onclick = "checkForm();">
+                            <input type = "submit" value = "Post" class = "post" onclick = "sendReport();">
                             <input type = "reset" value = "Clear" class = "clear" onclick = "clearConfirm();">
                         </p>
                     </fieldset>
@@ -80,4 +80,17 @@
         </div>
     </div>
 </body>
+<script src="./javascript/classes.js"></script>
+<script>
+    function sendReport() {
+        event.preventDefault();
+
+        title = document.getElementById('titleReport').value;
+        text = document.getElementById('contentReport').value;
+        let report = new Report(title, text);
+
+        sessionStorage.setItem('submittedReport', JSON.stringify(report)); // adds a Report object 
+        window.location.href = "traineeDashboard.html";
+    }
+</script>
 </html>

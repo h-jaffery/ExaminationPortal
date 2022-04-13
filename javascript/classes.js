@@ -21,6 +21,13 @@ class Exam {
     
 }
 
+class Report {
+    constructor(title, text){
+        this.title = title;
+        this.content = text;
+    }
+}
+
 class Question {
     constructor(id, content, markValue, markSchemeID){ // Possible parameters for MarkScheme together
         this.questionID = id; // int

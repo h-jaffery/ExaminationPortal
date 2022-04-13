@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exam result</title>
+    <title>Exam result - FDM Examination Portal</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <!-- https://fonts.google.com/specimen/Open+Sans -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -103,6 +103,7 @@
     </div>
     
 </body>
+
 <script src="./javascript/classes.js"></script>
 <script src="./javascript/variables.js"></script>
 <script>
@@ -113,8 +114,9 @@
         for (let i=0; i < questionArray.length; i++){
             totalMarks += questionArray[i].markValue;
             // marksGiven based off on markGivenArray
+            marksGiven += parseInt(markGivenArray[i]);
         }
-        let percentage = (marksGiven/totalMarks) * 100;
+        let percentage = Math.round((marksGiven/totalMarks) * 100);
         text = 
         `<div class="ResultInfo" style="border: 1px solid #ccc;">
             <p><b>Marks</b>: ${marksGiven}/${totalMarks}</p> 
@@ -159,13 +161,14 @@
 
 
     // Get data from page
-    var markGivenArray = JSON.parse(sessionStorage.getItem('markResultArray'));
-    // console.log(markGivenArray);
-    // console.log(markGivenArray[0]);
+    // Use marksGivenArray form variables.js
+
+    // console.log(marksGivenArray);
+    // console.log(marksGivenArray[0]);
 
     const resultDisplay = document.querySelector(".printResult");
     const summaryDisplay = document.querySelector(".summaryResult");
-    printSummary(markGivenArray, summaryDisplay);
-    printResult(questionArray, traineeAnswers, markGivenArray, markSchemeArray, resultDisplay);
+    printSummary(marksGivenArray, summaryDisplay);
+    printResult(questionArray, traineeAnswers, marksGivenArray, markSchemeArray, resultDisplay);
 
 </script>

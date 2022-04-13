@@ -30,18 +30,16 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 37%;">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="traineeDashboard.html">Dashboard
+                                <a class="nav-link active" href="traineeDashboard.html">Dashboard
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="modifyAccount.html">Modify Details</a>
                             </li>
-                        </ul>
-                        <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link d-flex" href="index.html">
                                     <i class="far fa-user mr-2 tm-logout-icon"></i>
@@ -151,7 +149,40 @@
             </div>
         </footer>
     </div>
-
-    
     
 </body>
+<script>
+    function printQuestions(questionArray, traineeAnswer, questionDisplay){
+        for (let i=0; i <questionArray.length; i++){
+            if(traineeAnswer[i] == null){
+                traineeAnswer[i] = "None";
+            }
+
+            text = 
+            `<div class="attemptQuestion">
+                <div class="attemptHeader row">
+                    <div class="questionTitle col-sm-9">${i+1}. ${questionArray[i].questionContent}</div>
+                    <div class="questionValue col-sm-3">[${questionArray[i].markValue} mark]</div>
+                </div>
+                
+                <div class="attemptAnswer">
+                    <div>
+                        <p>Trainee answer: ${traineeAnswer[i]}</p>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-3">
+                                <p>Marks given:</p>
+                            </div>
+                            <div class="col-6">
+                                <input type="number" value="0" min="0" max="${questionArray.markValue}" id="markList${i}" style="margin-bottom: 1%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+            questionDisplay.insertAdjacentHTML("beforeend", text);
+        }
+            
+    }
+</script>

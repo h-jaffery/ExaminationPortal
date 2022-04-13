@@ -56,15 +56,15 @@
             <div class = "newbox2" style="display: inline-block;">
                 <h3>Programming Module Exam</h3>
                 <form method = "POST" action = "reports.php" id = "form">
-                    <p>When was the first computer invented? [1 mark]</p>
-                    <input type="checkbox" id="vehicle1" name="check" onclick="onlyOne(this)">
+                    <p>1. When was the first computer invented? [1 mark]</p>
+                    <input type="checkbox" id="num1" name="check" onclick="onlyOne(this)" value="1943">
                     <label style="vertical-align: top;" for="vehicle1"> 1943</label><br>
-                    <input type="checkbox" id="vehicle2" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num1" name="check" onclick="onlyOne(this)"value="1937">
                     <label style="vertical-align: top;" for="vehicle2"> 1937</label><br>
-                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num1" name="check" onclick="onlyOne(this)"value="1945">
                     <label style="vertical-align: top;" for="vehicle3"> 1945</label><br>
-                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
-                    <label style="vertical-align: top;" for="vehicle3"> 1937</label><br>
+                    <input type="checkbox" id="num1" name="check" onclick="onlyOne(this)"value="1940">
+                    <label style="vertical-align: top;" for="vehicle3"> 1940</label><br>
                     <script>
                         function onlyOne(checkbox) {
                             var checkboxes = document.getElementsByName('check')
@@ -73,29 +73,29 @@
                             })
                         }
                     </script>
-                    <p>What was the name of the first computer invented? [1 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
-                    <p>Who is known as the father of computers? [1 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
-                    <p>What was the first mass-produced computer? [1 mark]</p>
-                    <input type="checkbox" id="vehicle1" name="check" onclick="onlyOne(this)">
+                    <p>2. What was the name of the first computer invented? [1 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text" id="num2">
+                    <p>3. Who is known as the father of computers? [1 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text" id="num3">
+                    <p>4. What was the first mass-produced computer? [1 mark]</p>
+                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
                     <label style="vertical-align: top;" for="vehicle1"> The Mac</label><br>
-                    <input type="checkbox" id="vehicle2" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
                     <label style="vertical-align: top;" for="vehicle2"> IBM 650</label><br>
-                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
                     <label style="vertical-align: top;" for="vehicle3"> Linux 500</label><br>
-                    <input type="checkbox" id="vehicle3" name="check" onclick="onlyOne(this)">
+                    <input type="checkbox" id="num4" name="check" onclick="onlyOne(this)">
                     <label style="vertical-align: top;" for="vehicle3"> Windows 270</label><br>
-                    <p>What is Computer programming? [2 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
-                    <p>How does programming work? [3 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
-                    <p>When a syntax error occurs? [1 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
-                    <p>When a runtime error occurs? [3 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
-                    <p>What are reserved words? [1 mark]</p>
-                    <input style="margin-bottom: 1%;" type="text">
+                    <p>5. What is Computer programming? [2 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text" id="num5">
+                    <p>6. How does programming work? [3 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text" id="num6">
+                    <p>7. When a syntax error occurs? [1 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text" id="num7">
+                    <p>8. When a runtime error occurs? [3 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text" id="num8">
+                    <p>9. What are reserved words? [1 mark]</p>
+                    <input style="margin-bottom: 1%;" type="text" id="num9">
                     <br><br><button type="submit" style="margin-right: 5%;" onclick="" class="btn btn-primary d-inline-block">Submit</button>
                     <button type="submit" onclick="" class="btn btn-primary d-inline-block">Save Changes</button>
                 </form>
@@ -145,7 +145,14 @@
                         document.getElementById("demo").innerHTML = "EXPIRED";
                     }
                     }, 1000);
-
+                    
+                    
+                    function sendAnswers() {
+                        event.preventDefault();
+                        for (i=0; i < 9; i++){
+                            document.getElementById("storeArray")
+                        }
+                    }
                     </script>
             </div>
             <footer class="row tm-mt-small">

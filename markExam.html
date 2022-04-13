@@ -77,7 +77,7 @@
                     <div class="tm-block">
                         <div class="col">
                             <h2 class="tm-block-title d-inline-block">Questions</h2>
-                            <p>Trainee: </p>
+                            <p>Name: Trainee</p>
                                
                             <div class = "questionList">
                             </div>
@@ -142,7 +142,7 @@
                                     <p>Marks given:</p>
                                 </div>
                                 <div class="col-6">
-                                    <input type="number" value="0" min="0" max="${questionArray.markValue}" id="markList${i}" style="margin-bottom: 1%;">
+                                    <input type="number" value="0" min="0" max="${questionArray[i].markValue}" id="markList${i}" style="margin-bottom: 1%;">
                                 </div>
                             </div>
                         </div>
@@ -201,15 +201,16 @@
         const resultDispay = document.querySelector(".resultTotal");
         printTotal(questionArray, resultDispay);
 
-        var x = setInterval(function(){
+        var x = setInterval(function() {
             var inputs = 0;
-            console.log(document.getElementById(`markList1`).value);
+            var totalMark = 0;
             for (let i=0; i < questionArray.length; i++){
-                inputs += document.getElementById(`markList${i}`).value;
+                inputs += parseInt(document.getElementById(`markList${i}`).value);
+                totalMark += questionArray[i].markValue;
                 // Pass string to int
-                
             }
-            document.getElementsById("total").innerHTML = inputs;
+            var string = "Total Marks: " + inputs + "/" + totalMark;
+            document.getElementById("total").innerHTML = string;
         }, 1000);
 
 

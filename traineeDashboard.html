@@ -53,47 +53,30 @@
             </div>
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Start Exam<a href="completeExam.html" class="tm-link-plus">+</a></h2>
-                        <canvas id="lineChart"></canvas>
+                    <div class="bg-white tm-block h-2">
+                        <h2><a class="dashboardLink" href= "completeExam.html" onclick="linky();">Start the Exam</a></h2>
+                        <script>
+                            function linky() {
+                                confirm("Are you sure you want to start the exam?");
+                            }
+                        </script>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Review Exam Results<a href="traineeExamResult.html" class="tm-link-plus">+</a></h2>
-                        <canvas id="barChart"></canvas>
+                    <div class="bg-white tm-block h-2">
+                        <h2><a class="dashboardLink" href= "traineeExamResult.html">Review Exam Results</a></h2>
                     </div>
                 </div>
                 <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Submit Report<a href="createReport.html" class="tm-link-plus">+</a></h2>
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
-
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <div class="row">
-                            <div class="col-8">
-                                <h2 class="tm-block-title d-inline-block">Current Modules</h2>
-                            </div>
-                        </div>
-                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
-                            <li class="tm-list-group-item">
-                                Module 1
-                            </li>
-                            <li class="tm-list-group-item">
-                                Module 2
-                            </li>
-                        </ol>
+                    <div class="bg-white tm-block h-2">
+                        <h3><a class="dashboardLink" href= "createReport.html">Submit Software Error Report</a></h2>
                     </div>
                 </div>
             </div>
             <footer class="row tm-mt-small">
-                <div class="col-12 font-weight-light">
+                <div class="col-12 font-weight-light text-center">
                     <p class="d-inline-block tm-bg-black text-white py-2 px-4">
-                        Copyright &copy; 2022 QMUL SE Project Group 19
-                    </p>
+                        Copyright &copy; 2022 QMUL SE Project Group 19</p>
                 </div>
             </footer>
         </div>

@@ -8,7 +8,7 @@ Open `index.html` in your Desktop Web Browser.
 
 ## Contributing
 
-Boilerplate template taken from: https://www.tooplate.com/view/2108-dashboard.
+Boilerplate template used from: https://www.tooplate.com/view/2108-dashboard.
 
 ## License
 
